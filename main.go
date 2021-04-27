@@ -32,3 +32,5 @@ func main() {
 // OneZero,ThreeZeroZero,Five
 // go run main.go 3 25 209
 // Three,TwoFive,TwoZeroNine
+// error test case: Also works!
+// go run main.go 32 10 axfcvs != ;#

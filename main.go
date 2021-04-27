@@ -11,7 +11,12 @@ func main() {
 
   for _, i := range os.Args[1:]{ // read each argument in command line
     for j := 0; j < len(i); j++{ // for each element in array, convert to numerical word
-      result = result + (x[i[j] - 48]) // convert from ascii to integer, access numerical word from list x, append to string 
+      if i[j] > 48 && i[j] < 58 { // test if input is a number
+          result = result + (x[i[j] - 48]) // convert from ascii to integer, access numerical word from list x, append to string
+      } else { // throw error if not number
+        fmt.Println("Error! User input includes a non-numerical value.")
+        return
+        }
     }
     result = result + "," // appebnd comma to string
   }
